@@ -15,8 +15,9 @@ async function findInAPI(pokeName) {
         const image=document.getElementById("pokemonImage");
         image.src=values.sprites.front_default;
         image.classList.add("display");
-        const pokeName=document.getElementById("name");
-        image.innerHTML=values;
+        const name=document.getElementById("name");
+        name.innerHTML=values.name.toUpperCase();
+        console.log(values.name);
 
     } catch (error) {
         document.getElementById("error").innerHTML=error;

@@ -29,7 +29,9 @@
 
 .answer{
     display: flex;
+    flex-direction: column;
     justify-content: center;
+    align-items: center;
 }
 
 .pokemonImage{
@@ -39,4 +41,8 @@
     display: block;
     width: 200px;
     height: 200px;
+    border: 1px solid white;
+}
+.name{
+    text-align: center;
 }
