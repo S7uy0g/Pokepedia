@@ -15,6 +15,8 @@ async function findInAPI(pokeName) {
         const image=document.getElementById("pokemonImage");
         image.src=values.sprites.front_default;
         image.classList.add("display");
+        const pokeName=document.getElementById("name");
+        image.innerHTML=values;
 
     } catch (error) {
         document.getElementById("error").innerHTML=error;
@@ -31,6 +33,7 @@ function SearchPokemon(){
             <div className='answer'>
                 <p id="error"></p>
                 <img src="" alt="Pokemon Image" id="pokemonImage" className="pokemonImage"/>
+                <p id='name'></p>
             </div>
         </>
     );
