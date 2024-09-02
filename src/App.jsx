@@ -5,7 +5,11 @@ function App() {
 
   return (
     <>
-      <SearchPokemon/>
+    <div className='main-container'>  
+      <div className='searchShow-container'>  
+        <SearchPokemon/>
+      </div>
+    </div>
     </>
   )
 }

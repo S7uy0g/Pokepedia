@@ -31,6 +31,7 @@ async function findInAPI(pokeName) {
 function showNameImage(values){
     const image=document.getElementById("pokemonImage");
     image.src=values.sprites.front_default;
+    // document.getElementById("answer").classList.add("display");
     image.classList.add("display");
     const name=document.getElementById("name");
     name.innerHTML=values.name.toUpperCase();
@@ -43,7 +44,7 @@ function showDetails(values){
     const headings = document.querySelectorAll('.heading');
 
     height.innerHTML=values.height+" m";
-    weight.innerHTML=values.weight+" kg";
+    weight.innerHTML=(values.weight/10)+" kg";
 
     let typeHtml = '';
     values.types.forEach(type => {
@@ -60,22 +61,31 @@ function showDetails(values){
 function SearchPokemon(){
     return (
         <>
-        <div id='content'>
+        <div className='content'>
             <div className='search'>
                 <input type="text" id="searchBox" className="searchBox" placeholder="Input Pokemon Name"/>
                 <button id="searchButton" className="searchButton" onClick={findPokemon}>&#128269;</button>
             </div>
-            <div className='answer'>
-                <p id="error"></p>
+            <div className='answer' id='answer'>
+                <p id="error" className='error'></p>
                 <img src="" alt="Pokemon Image" id="pokemonImage" className="pokemonImage"/>
-                <p id='name'></p>
+                <p id='name' className='name'></p>
                 <div className='details'>
-                    <p className='heading'>HEIGHT</p>
-                    <p id='height'></p>
-                    <p className='heading'>WEIGHT</p>
-                    <p id='weight'></p>
                     <p className='heading'>TYPE</p>
                     <p id='type'></p>
+                    
+                    <div className='div'>
+                    <div className='div1'>
+                    <p className='heading'>HEIGHT</p>
+                    <p id='height'></p>
+                    </div>
+                    <div className='div2'>
+                    <p className='heading'>WEIGHT</p>
+                    <p id='weight'></p>
+                    </div>
+                    </div>
+                    
+                    
                 </div>
             </div>
         </div>
