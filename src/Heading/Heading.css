@@ -1,0 +1,49 @@
+
+.main-heading-container{
+    display: flex;
+}
+.dis-container, .image-slider {
+    /* display: flex;
+    justify-content: center; */
+    width: 100%;
+    height: 300px;
+    border: 1px solid black;
+}
+
+
+
+/*Description Container*/
+.dis-container{
+    display: grid;
+    grid-template-columns: 10% 80% 10%;
+}
+.dis-container h1,h3,p{
+    grid-column-start: 2;
+}
+.dis-container h1{
+    display: flex;
+    align-items: end;
+}
+
+/*ImageSlider Container*/
+
+.heading-pokeImage{
+    display: none;
+}
+.heading-pokeImage.display{
+    display: block;
+    width: 200px;
+    height: 200px;
+}
+
+
+
+
+
+
+
+@media (max-width: 500px){
+    .dis-container{
+        display: none;
+    }
+}

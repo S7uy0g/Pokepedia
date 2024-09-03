@@ -52,7 +52,6 @@ p{
     display: block;
     width: 200px;
     height: 200px;
-    border: 1px solid white;
 }
 .name{
     text-align: center;
@@ -67,7 +66,14 @@ p{
     color: black;
     font-weight: bold;
 }
-/* .div{
+.div{
     display: grid;
     grid-template-columns:50% 50%;
-} */
+}
+
+@media (max-width: 300px){
+    .searchBox{
+        width: 200px;
+        height: 40px;
+    }
+}

@@ -1,8 +1,16 @@
-#root {
+/* #root {
   max-width: 1280px;
+} */
+.heading-container{
+  background-image: url('./Heading/40154.webp');
+  background-size: cover; /* This makes the image cover the entire element */
+  background-position: center; /* This centers the image */
+  background-repeat: no-repeat;
 }
-
+/* 
 .searchShow-container{
   display: flex;
   justify-content: center;
-}
+  width: 100%;
+  flex-wrap: wrap;
+} */

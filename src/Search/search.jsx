@@ -84,8 +84,6 @@ function SearchPokemon(){
                     <p id='weight'></p>
                     </div>
                     </div>
-                    
-                    
                 </div>
             </div>
         </div>
