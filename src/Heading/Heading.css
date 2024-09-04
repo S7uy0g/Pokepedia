@@ -1,13 +1,20 @@
 
 .main-heading-container{
     display: flex;
+    background: linear-gradient(to right, #FFCB05 30%, #ffffff 70%);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    color: white;
+    border-radius: 0 0 50px 50px;
+    border-bottom: 5px solid #3D7DCA;
 }
 .dis-container, .image-slider {
     /* display: flex;
     justify-content: center; */
     width: 100%;
     height: 300px;
-    border: 1px solid black;
+    opacity: 1;
 }
 
 
@@ -34,6 +41,17 @@
     display: block;
     width: 200px;
     height: 200px;
+    animation-name: fade;
+    animation-duration: 0.5s;
+}
+@keyframes fade{
+    from{opacity: 0;}
+    to{opacity: 1;}
+}
+.image-slider{
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 

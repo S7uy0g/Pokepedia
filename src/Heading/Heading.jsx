@@ -1,29 +1,31 @@
 import './Heading.css'; 
 
+import { useEffect, useState } from 'react';
+
+
 
 function Heading(){
+    const [slideIndex, setSlideIndex] = useState(0);
+    const slideDuration = 3000; 
 
-    async function findInAPI() {
-        try {
-            const randomNumber = Math.floor(Math.random() * (1024 - 1 + 1)) + 1;
-            const response=await fetch(`https://pokeapi.co/api/v2/pokemon/${randomNumber}`)
-            if(!response.ok){
-                throw new Error("Could not find data");
-            }
-            else{
-                document.getElementById("error").innerHTML=null;
-                const values=await response.json();
-                showNameImage(values);
-            }
-    
-        } catch (error) {
-            document.getElementById("error").innerHTML=error;
+    useEffect(() => {
+        const slides = document.querySelectorAll(".heading-pokeImage");
+        if (slides.length > 0) {
+            slides[slideIndex].classList.add("display");
+
+            const intervalId = setInterval(() => {
+                showNextSlide(slides);
+            }, slideDuration);
+
+            return () => clearInterval(intervalId); // Clean up on component unmount
         }
-    }
-    function showNameImage(values){
-        const image=document.getElementById("heading-pokeImage");
-        image.src=values.sprites.front_default;
-        image.classList.add("display");
+    }, [slideIndex]);
+
+    function showNextSlide(slides) {
+        slides[slideIndex].classList.remove("display");
+        const nextIndex = (slideIndex + 1) % slides.length;
+        setSlideIndex(nextIndex);
+        slides[nextIndex].classList.add("display");
     }
 
     return(
@@ -34,7 +36,10 @@ function Heading(){
                 <h3>A wikipedia for pokemons</h3>
             </div>
             <div className='image-slider'>
-                <img src="" alt="Image1" className='heading-pokeImage' id='heading-pokeImage'/>
+                <img src="./800px-0001Bulbasaur.png" alt="Image1" className='heading-pokeImage' id='heading-pokeImage'/>
+                <img src="./800px-0004Charmander.png" alt="Image1" className='heading-pokeImage' id='heading-pokeImage'/>
+                <img src="./800px-0007Squirtle.png" alt="Image1" className='heading-pokeImage' id='heading-pokeImage'/>
+                <img src="./800px-0025Pikachu.png" alt="Image1" className='heading-pokeImage' id='heading-pokeImage'/>
             </div>
         </div>
         </>

@@ -67,22 +67,24 @@ function SearchPokemon(){
                 <button id="searchButton" className="searchButton" onClick={findPokemon}>&#128269;</button>
             </div>
             <div className='answer' id='answer'>
-                <p id="error" className='error'></p>
-                <img src="" alt="Pokemon Image" id="pokemonImage" className="pokemonImage"/>
-                <p id='name' className='name'></p>
-                <div className='details'>
-                    <p className='heading'>TYPE</p>
-                    <p id='type'></p>
-                    
-                    <div className='div'>
-                    <div className='div1'>
-                    <p className='heading'>HEIGHT</p>
-                    <p id='height'></p>
-                    </div>
-                    <div className='div2'>
-                    <p className='heading'>WEIGHT</p>
-                    <p id='weight'></p>
-                    </div>
+                <div className='card'>
+                    <p id="error" className='error'></p>
+                    <img src="" alt="Pokemon Image" id="pokemonImage" className="pokemonImage"/>
+                    <p id='name' className='name'></p>
+                    <div className='details'>
+                        <p className='heading'>TYPE</p>
+                        <p id='type'></p>
+                        
+                        <div className='div'>
+                            <div className='div1'>
+                                <p className='heading'>HEIGHT</p>
+                                <p id='height'></p>
+                            </div>
+                            <div className='div2'>
+                                <p className='heading'>WEIGHT</p>
+                                <p id='weight'></p>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
