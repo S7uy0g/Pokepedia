@@ -32,14 +32,16 @@ function Heading(){
         <>
         <div className="main-heading-container">
             <div className='dis-container'>
-                <h1>Welcome To PokePedia</h1>
+                <h1>PokePedia</h1>
                 <h3>A wikipedia for pokemons</h3>
             </div>
             <div className='image-slider'>
-                <img src="./800px-0001Bulbasaur.png" alt="Image1" className='heading-pokeImage' id='heading-pokeImage'/>
-                <img src="./800px-0004Charmander.png" alt="Image1" className='heading-pokeImage' id='heading-pokeImage'/>
-                <img src="./800px-0007Squirtle.png" alt="Image1" className='heading-pokeImage' id='heading-pokeImage'/>
-                <img src="./800px-0025Pikachu.png" alt="Image1" className='heading-pokeImage' id='heading-pokeImage'/>
+                <div  className='border'>
+                    <img src="./800px-0001Bulbasaur.png" alt="Image1" className='heading-pokeImage' id='heading-pokeImage'/>
+                    <img src="./800px-0004Charmander.png" alt="Image1" className='heading-pokeImage' id='heading-pokeImage'/>
+                    <img src="./800px-0007Squirtle.png" alt="Image1" className='heading-pokeImage' id='heading-pokeImage'/>
+                    <img src="./800px-0025Pikachu.png" alt="Image1" className='heading-pokeImage' id='heading-pokeImage'/>
+                </div>
             </div>
         </div>
         </>
