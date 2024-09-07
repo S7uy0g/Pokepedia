@@ -1,6 +1,7 @@
 import './App.css'
 import SearchPokemon from './Search/search'
 import Heading from './Heading/Heading'
+import PokemonList from './Lists/List'
 
 function App() {
 
@@ -13,6 +14,7 @@ function App() {
       <div className='searchShow-container'>  
         <SearchPokemon/>
       </div>
+      <PokemonList/>
     </div>
     </>
   )

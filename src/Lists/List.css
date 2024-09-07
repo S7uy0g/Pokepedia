@@ -1,0 +1,35 @@
+.pokemon-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 16px;
+    justify-content: center;
+}
+  
+.pokemon-card {
+    color: white;
+    text-align: center;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    padding-bottom: 15px;
+}
+  
+.pokemon-card img {
+    width: 200px;
+    height: 200px;
+    object-fit: cover;
+}
+h1{
+    background-color: rgb(66, 66, 66);
+    font-size: 1rem;
+}
+.heading2{
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+}
+.heading3{
+    display: flex;
+    justify-content: center;
+}
+.div1,.div2{
+    flex: 1;
+}
