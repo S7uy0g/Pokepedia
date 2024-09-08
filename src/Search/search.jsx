@@ -1,4 +1,5 @@
 import './style.css'; 
+import { useNavigate } from 'react-router-dom';
 
 const typeBackgrounds = {
     "NORMAL": "linear-gradient(to top, #A8A878, #2c2c2c 80%)",
@@ -81,6 +82,11 @@ function showDetails(values){
 
 
 function SearchPokemon(){
+    const navigate = useNavigate();
+
+    const handleCardClick = (pokemonName) => {
+        navigate(`/details/${pokemonName}`);
+    };
     return (
         <>
         <div className='content'>
@@ -89,7 +95,7 @@ function SearchPokemon(){
                 <button id="searchButton" className="searchButton" onClick={findPokemon}>&#128269;</button>
             </div>
             <div className='answer' id='answer'>
-                <div className='card' id='card'>
+                <div className='card' id='card' onClick={() => handleCardClick(document.getElementById("name").innerText.toLowerCase())}>
                     <p id="error" className='error'></p>
                     <img src="" alt="Pokemon Image" id="pokemonImage" className="pokemonImage"/>
                     <p id='name' className='name'></p>
