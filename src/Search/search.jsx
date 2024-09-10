@@ -64,7 +64,7 @@ function showDetails(values){
     const headings = document.querySelectorAll('.heading');
     const backgroundImage=document.getElementById("card");
 
-    height.innerHTML=values.height+" m";
+    height.innerHTML=values.height/10+" m";
     weight.innerHTML=(values.weight/10)+" kg";
 
     let typeHtml = '';
