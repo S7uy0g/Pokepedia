@@ -1,0 +1,25 @@
+.mainDiv{
+    color: white;
+}
+.mainDiv h1{
+    text-align: center;
+    font-size: 2rem;
+}
+.spriteWrapper{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.spriteImage{
+    width: 200px;
+    height: 200px;
+}
+.navButton {
+    background: none;
+    border: none;
+    font-size: 2rem;
+    cursor: pointer;
+}
+.navButton:hover{
+    scale: 1.1;
+}
